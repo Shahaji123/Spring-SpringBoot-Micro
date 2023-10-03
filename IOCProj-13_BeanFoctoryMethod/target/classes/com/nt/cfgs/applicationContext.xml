@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+      <!-- static factory method returning its own class object -->
+      <bean id="c1" class="java.lang.Class" factory-method="forName">
+         <constructor-arg value="java.util.Date"/>
+      </bean>
+      
+      <!-- static factory method returning relevent class object -->        
+       <bean id="cal" class="java.util.Calendar" factory-method="getInstance"/>
+        
+        
+          <bean id="props" class="java.lang.System" factory-method="getProperties"/>    
+</beans>
